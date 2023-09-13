@@ -1,0 +1,8 @@
+Entries in 2016 HLT2 inclusive data tree: 127255
+Entries in 2017 HLT2 inclusive data tree: 125636
+Entries in 2018 HLT2 inclusive data tree: 148797
+----------------------------------------------
+Entries in 2016 HLT2 inclusive data tree after duplicates removal: 126813
+Entries in 2017 HLT2 inclusive data tree after duplicates removal: 125202
+Entries in 2018 HLT2 inclusive data tree after duplicates removal: 148219
+----------------------------------------------

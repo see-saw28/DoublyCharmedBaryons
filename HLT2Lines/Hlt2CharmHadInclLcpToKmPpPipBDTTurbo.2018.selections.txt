@@ -1,0 +1,107 @@
+
+Hlt2CharmHadInclLcpToKmPpPipBDTTurboFiltBDTFilter
+=================================================
+
+Selection
+---------
+Code: FILTER('BBDecTreeTool/DstBBDT')
+
+Inputs
+------
+
+    Hlt2CharmHadInclLcpToKmPpPipMassFilterMassFilter
+    ================================================
+
+    Selection
+    ---------
+    Code: in_range( 2211.0 , M , 2362.0 )
+
+    Inputs
+    ------
+
+        Hlt2CharmHadCharmHadInclLcXicpToKmPpPipCombiner
+        ===============================================
+
+        Selection
+        ---------
+        DecayDescriptors: [ '[Lambda_c+ -> K- p+ pi+]cc' ]
+        Preambulo:        ['import math', 'lcldira = math.cos( 1.57079632679 )']
+        DaughtersCuts:    { '' : 'ALL' , 'K+' : '(PT > 50.0) & (MIPCHI2DV(PRIMARY) > 1.0)' , 'K-' : '(PT > 50.0) & (MIPCHI2DV(PRIMARY) > 1.0)' , 'mu+' : '(PT > 50.0) & (MIPCHI2DV(PRIMARY) > 1.0)' , 'p+' : '(PT > 50.0) & (MIPCHI2DV(PRIMARY) > 1.0)' , 'pi+' : '(PT > 50.0) & (MIPCHI2DV(PRIMARY) > 1.0)' , 'pi-' : '(PT > 50.0) & (MIPCHI2DV(PRIMARY) > 1.0)' , 'p~-' : '(PT > 50.0) & (MIPCHI2DV(PRIMARY) > 1.0)' }
+        CombinationCut:   (in_range( 2100.0, AM, 2700.0 )) & ((APT1+APT2+APT3) > 0.0 ) & (AHASCHILD(PT > 50.0)) & (ANUM(PT > 50.0) >= 2) & (AHASCHILD((MIPCHI2DV(PRIMARY)) > 1.0)) & (ANUM(MIPCHI2DV(PRIMARY) > 1.0) >= 2)
+        MotherCut:        (VFASPF(VCHI2PDOF) < 50.0) & (BPVDIRA > lcldira ) & (BPVLTIME() > 0.0 )
+
+        Inputs
+        ------
+
+            Hlt2CharmHadSharedDetachedLcChildTighterProtonFilter
+            ====================================================
+
+            Selection
+            ---------
+            Code: (PIDp > 5.0  ) & ( (PIDp-PIDK) > 5.0 ) & ( P > 10000.0 )
+
+            Inputs
+            ------
+
+                Hlt2CharmHadSharedDetachedLcChild_pFilter
+                =========================================
+
+                Selection
+                ---------
+                Code:   (TRCHI2DOF < 3.0 )& (TRGHOSTPROB < 0.4)& (PT > 200.0)& (P > 1000.0)& (MIPCHI2DV(PRIMARY) > 4.0)& (PIDp > 5)
+
+                Inputs
+                ------
+
+                    Hlt2BiKalmanFittedRichProtons
+                    =============================
+
+                    Selection
+                    ---------
+                    Code: (PPCUT(PP_HASINFO(LHCb.ProtoParticle.RichPIDStatus)))
+
+                    Inputs
+                    ------
+                        Hlt2/Hlt2BiKalmanFittedProtons/Particles
+
+            Hlt2CharmHadSharedDetachedLcChild_KFilter
+            =========================================
+
+            Selection
+            ---------
+            Code:   (TRCHI2DOF < 3.0 )& (TRGHOSTPROB < 0.4)& (PT > 200.0)& (P > 1000.0)& (MIPCHI2DV(PRIMARY) > 4.0)& (PIDK > 5)
+
+            Inputs
+            ------
+
+                Hlt2BiKalmanFittedRichKaons
+                ===========================
+
+                Selection
+                ---------
+                Code: (PPCUT(PP_HASINFO(LHCb.ProtoParticle.RichPIDStatus)))
+
+                Inputs
+                ------
+                    Hlt2/Hlt2BiKalmanFittedKaons/Particles
+
+            Hlt2CharmHadSharedDetachedLcChild_piFilter
+            ==========================================
+
+            Selection
+            ---------
+            Code:   (TRCHI2DOF < 3.0 )& (TRGHOSTPROB < 0.4)& (PT > 200.0)& (P > 1000.0)& (MIPCHI2DV(PRIMARY) > 4.0)& (PIDK < 5)
+
+            Inputs
+            ------
+
+                Hlt2BiKalmanFittedRichPions
+                ===========================
+
+                Selection
+                ---------
+                Code: (PPCUT(PP_HASINFO(LHCb.ProtoParticle.RichPIDStatus)))
+
+                Inputs
+                ------
+                    Hlt2/Hlt2BiKalmanFittedPions/Particles

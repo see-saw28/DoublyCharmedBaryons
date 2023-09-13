@@ -1,0 +1,6 @@
+Entries in 2018 HLT2 inclusive data tree: 148797
+Entries in 2018 HLT2 exclusive data tree: 130572
+Entries in 2018 HLT2 BDT inclusive data tree: 218619
+----------------------------------------------
+Final number of events: 261072
+----------------------------------------------

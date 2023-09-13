@@ -1,0 +1,41 @@
+84 124 10 22
+Xiccpst-Loose
+Backround at 10MeV : 84
+BDT : Maximimum signal significance of 1.0440E-01 for a cut of -0.040 with a 0.74 signal efficiency
+BDTG : Maximimum signal significance of 1.0466E-01 for a cut of -0.160 with a 0.79 signal efficiency
+MLP : Maximimum signal significance of 1.0467E-01 for a cut of 0.180 with a 0.70 signal efficiency
+Xiccpst-Tight
+Backround at 10MeV : 32
+BDT : Maximimum signal significance of 1.4977E-01 for a cut of -0.060 with a 0.86 signal efficiency
+BDTG : Maximimum signal significance of 1.4977E-01 for a cut of -0.400 with a 0.89 signal efficiency
+MLP : Maximimum signal significance of 1.5104E-01 for a cut of 0.240 with a 0.86 signal efficiency
+Omegaccpst-Loose
+Backround at 10MeV : 10
+BDT : Maximimum signal significance of 2.7637E-01 for a cut of -0.040 with a 0.84 signal efficiency
+BDTG : Maximimum signal significance of 2.7769E-01 for a cut of -0.040 with a 0.85 signal efficiency
+MLP : Maximimum signal significance of 2.7991E-01 for a cut of 0.220 with a 0.86 signal efficiency
+Omegaccpst-Tight
+Backround at 10MeV : 0
+BDT : Maximimum signal significance of 6.6667E-01 for a cut of -1.000 with a 1.00 signal efficiency
+BDTG : Maximimum signal significance of 6.6667E-01 for a cut of -1.000 with a 1.00 signal efficiency
+MLP : Maximimum signal significance of 6.6667E-01 for a cut of -1.000 with a 1.00 signal efficiency
+Xiccpst-Loose
+Backround at 50MeV : 124
+BDT : Maximimum signal significance of 8.9261E-02 for a cut of -0.040 with a 0.74 signal efficiency
+BDTG : Maximimum signal significance of 8.9479E-02 for a cut of -0.060 with a 0.73 signal efficiency
+MLP : Maximimum signal significance of 8.9713E-02 for a cut of 0.180 with a 0.70 signal efficiency
+Xiccpst-Tight
+Backround at 50MeV : 42
+BDT : Maximimum signal significance of 1.3523E-01 for a cut of -0.060 with a 0.86 signal efficiency
+BDTG : Maximimum signal significance of 1.3530E-01 for a cut of -0.220 with a 0.81 signal efficiency
+MLP : Maximimum signal significance of 1.3640E-01 for a cut of 0.240 with a 0.86 signal efficiency
+Omegaccpst-Loose
+Backround at 50MeV : 22
+BDT : Maximimum signal significance of 2.2182E-01 for a cut of -0.040 with a 0.84 signal efficiency
+BDTG : Maximimum signal significance of 2.2290E-01 for a cut of 0.060 with a 0.82 signal efficiency
+MLP : Maximimum signal significance of 2.2430E-01 for a cut of 0.220 with a 0.86 signal efficiency
+Omegaccpst-Tight
+Backround at 50MeV : 2
+BDT : Maximimum signal significance of 3.9077E-01 for a cut of -0.060 with a 0.92 signal efficiency
+BDTG : Maximimum signal significance of 3.9115E-01 for a cut of -0.520 with a 0.94 signal efficiency
+MLP : Maximimum signal significance of 3.9212E-01 for a cut of 0.320 with a 0.92 signal efficiency

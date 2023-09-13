@@ -1,0 +1,378 @@
+DataSetInfo              : [dataset-Xiccpst-Tight] : Added class "Signal"
+                         : Add Tree DecayTree of type Signal with 7216 events
+DataSetInfo              : [dataset-Xiccpst-Tight] : Added class "Background"
+                         : Add Tree DecayTree of type Background with 8065 events
+                         : Add Tree DecayTree of type Background with 3676 events
+Factory                  : Booking method: [1mBDT[0m
+                         : 
+                         : Rebuilding Dataset dataset-Xiccpst-Tight
+                         : Building event vectors for type 2 Signal
+                         : Dataset[dataset-Xiccpst-Tight] :  create input formulas for tree DecayTree
+                         : Building event vectors for type 2 Background
+                         : Dataset[dataset-Xiccpst-Tight] :  create input formulas for tree DecayTree
+                         : Building event vectors for type 2 Background
+                         : Dataset[dataset-Xiccpst-Tight] :  create input formulas for tree DecayTree
+DataSetFactory           : [dataset-Xiccpst-Tight] : Number of events in input trees
+                         : Dataset[dataset-Xiccpst-Tight] :     Signal     requirement: "abs(Xicc_M_DTF_Lc_PV-3621)<15 & abs(Lc_M-2288)<18"
+                         : Dataset[dataset-Xiccpst-Tight] :     Signal          -- number of events passed: 7216   / sum of weights: 7216 
+                         : Dataset[dataset-Xiccpst-Tight] :     Signal          -- efficiency             : 1     
+                         : Dataset[dataset-Xiccpst-Tight] :     Background requirement: ""
+                         : Dataset[dataset-Xiccpst-Tight] :     Background      -- number of events passed: 11741  / sum of weights: 11741
+                         : Dataset[dataset-Xiccpst-Tight] :     Background      -- efficiency             : 1     
+                         : 
+                         : 
+                         : Number of training and testing events
+                         : ---------------------------------------------------------------------------
+                         : Signal     -- training events            : 3608
+                         : Signal     -- testing events             : 3608
+                         : Signal     -- training and testing events: 7216
+                         : Background -- training events            : 5870
+                         : Background -- testing events             : 5870
+                         : Background -- training and testing events: 11740
+                         : 
+DataSetInfo              : Correlation matrix (Signal):
+                         : ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+                         :                                                               log_TMath_Max_10e_M_10,C_ENDVERTEX_CHI2_D_C_ENDVERTEX_NDOF__    C_PT log_Pi_IPCHI2_OWNPV_ Pi_ProbNNpi   Pi_PT
+                         : log_TMath_Max_10e_M_10,C_ENDVERTEX_CHI2_D_C_ENDVERTEX_NDOF__:                                                       +1.000  +0.030               +0.486      -0.005  +0.054
+                         :                                                         C_PT:                                                       +0.030  +1.000               +0.008      +0.047  +0.479
+                         :                                         log_Pi_IPCHI2_OWNPV_:                                                       +0.486  +0.008               +1.000      -0.032  +0.049
+                         :                                                  Pi_ProbNNpi:                                                       -0.005  +0.047               -0.032      +1.000  +0.114
+                         :                                                        Pi_PT:                                                       +0.054  +0.479               +0.049      +0.114  +1.000
+                         : ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+DataSetInfo              : Correlation matrix (Background):
+                         : ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+                         :                                                               log_TMath_Max_10e_M_10,C_ENDVERTEX_CHI2_D_C_ENDVERTEX_NDOF__    C_PT log_Pi_IPCHI2_OWNPV_ Pi_ProbNNpi   Pi_PT
+                         : log_TMath_Max_10e_M_10,C_ENDVERTEX_CHI2_D_C_ENDVERTEX_NDOF__:                                                       +1.000  +0.012               +0.474      -0.010  +0.034
+                         :                                                         C_PT:                                                       +0.012  +1.000               +0.048      +0.002  +0.366
+                         :                                         log_Pi_IPCHI2_OWNPV_:                                                       +0.474  +0.048               +1.000      +0.010  +0.120
+                         :                                                  Pi_ProbNNpi:                                                       -0.010  +0.002               +0.010      +1.000  +0.062
+                         :                                                        Pi_PT:                                                       +0.034  +0.366               +0.120      +0.062  +1.000
+                         : ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+DataSetFactory           : [dataset-Xiccpst-Tight] :  
+                         : 
+Factory                  : Booking method: [1mBDTG[0m
+                         : 
+                         : the option NegWeightTreatment=InverseBoostNegWeights does not exist for BoostType=Grad
+                         : --> change to new default NegWeightTreatment=Pray
+Factory                  : Booking method: [1mMLP[0m
+                         : 
+MLP                      : [dataset-Xiccpst-Tight] : Create Transformation "N" with events from all classes.
+                         : 
+                         : Transformation, Variable selection : 
+                         : Input : variable 'log(TMath::Max(10e-10,C_ENDVERTEX_CHI2/C_ENDVERTEX_NDOF))' <---> Output : variable 'log(TMath::Max(10e-10,C_ENDVERTEX_CHI2/C_ENDVERTEX_NDOF))'
+                         : Input : variable 'C_PT' <---> Output : variable 'C_PT'
+                         : Input : variable 'log(Pi_IPCHI2_OWNPV)' <---> Output : variable 'log(Pi_IPCHI2_OWNPV)'
+                         : Input : variable 'Pi_ProbNNpi' <---> Output : variable 'Pi_ProbNNpi'
+                         : Input : variable 'Pi_PT' <---> Output : variable 'Pi_PT'
+MLP                      : Building Network. 
+                         : Initializing weights
+Factory                  : [1mTrain all methods[0m
+Factory                  : [dataset-Xiccpst-Tight] : Create Transformation "I" with events from all classes.
+                         : 
+                         : Transformation, Variable selection : 
+                         : Input : variable 'log(TMath::Max(10e-10,C_ENDVERTEX_CHI2/C_ENDVERTEX_NDOF))' <---> Output : variable 'log(TMath::Max(10e-10,C_ENDVERTEX_CHI2/C_ENDVERTEX_NDOF))'
+                         : Input : variable 'C_PT' <---> Output : variable 'C_PT'
+                         : Input : variable 'log(Pi_IPCHI2_OWNPV)' <---> Output : variable 'log(Pi_IPCHI2_OWNPV)'
+                         : Input : variable 'Pi_ProbNNpi' <---> Output : variable 'Pi_ProbNNpi'
+                         : Input : variable 'Pi_PT' <---> Output : variable 'Pi_PT'
+Factory                  : [dataset-Xiccpst-Tight] : Create Transformation "D" with events from all classes.
+                         : 
+                         : Transformation, Variable selection : 
+                         : Input : variable 'log(TMath::Max(10e-10,C_ENDVERTEX_CHI2/C_ENDVERTEX_NDOF))' <---> Output : variable 'log(TMath::Max(10e-10,C_ENDVERTEX_CHI2/C_ENDVERTEX_NDOF))'
+                         : Input : variable 'C_PT' <---> Output : variable 'C_PT'
+                         : Input : variable 'log(Pi_IPCHI2_OWNPV)' <---> Output : variable 'log(Pi_IPCHI2_OWNPV)'
+                         : Input : variable 'Pi_ProbNNpi' <---> Output : variable 'Pi_ProbNNpi'
+                         : Input : variable 'Pi_PT' <---> Output : variable 'Pi_PT'
+Factory                  : [dataset-Xiccpst-Tight] : Create Transformation "P" with events from all classes.
+                         : 
+                         : Transformation, Variable selection : 
+                         : Input : variable 'log(TMath::Max(10e-10,C_ENDVERTEX_CHI2/C_ENDVERTEX_NDOF))' <---> Output : variable 'log(TMath::Max(10e-10,C_ENDVERTEX_CHI2/C_ENDVERTEX_NDOF))'
+                         : Input : variable 'C_PT' <---> Output : variable 'C_PT'
+                         : Input : variable 'log(Pi_IPCHI2_OWNPV)' <---> Output : variable 'log(Pi_IPCHI2_OWNPV)'
+                         : Input : variable 'Pi_ProbNNpi' <---> Output : variable 'Pi_ProbNNpi'
+                         : Input : variable 'Pi_PT' <---> Output : variable 'Pi_PT'
+Factory                  : [dataset-Xiccpst-Tight] : Create Transformation "G" with events from all classes.
+                         : 
+                         : Transformation, Variable selection : 
+                         : Input : variable 'log(TMath::Max(10e-10,C_ENDVERTEX_CHI2/C_ENDVERTEX_NDOF))' <---> Output : variable 'log(TMath::Max(10e-10,C_ENDVERTEX_CHI2/C_ENDVERTEX_NDOF))'
+                         : Input : variable 'C_PT' <---> Output : variable 'C_PT'
+                         : Input : variable 'log(Pi_IPCHI2_OWNPV)' <---> Output : variable 'log(Pi_IPCHI2_OWNPV)'
+                         : Input : variable 'Pi_ProbNNpi' <---> Output : variable 'Pi_ProbNNpi'
+                         : Input : variable 'Pi_PT' <---> Output : variable 'Pi_PT'
+Factory                  : [dataset-Xiccpst-Tight] : Create Transformation "D" with events from all classes.
+                         : 
+                         : Transformation, Variable selection : 
+                         : Input : variable 'log(TMath::Max(10e-10,C_ENDVERTEX_CHI2/C_ENDVERTEX_NDOF))' <---> Output : variable 'log(TMath::Max(10e-10,C_ENDVERTEX_CHI2/C_ENDVERTEX_NDOF))'
+                         : Input : variable 'C_PT' <---> Output : variable 'C_PT'
+                         : Input : variable 'log(Pi_IPCHI2_OWNPV)' <---> Output : variable 'log(Pi_IPCHI2_OWNPV)'
+                         : Input : variable 'Pi_ProbNNpi' <---> Output : variable 'Pi_ProbNNpi'
+                         : Input : variable 'Pi_PT' <---> Output : variable 'Pi_PT'
+TFHandler_Factory        :                                                  Variable                                                         Mean                                                         RMS                                                 [        Min                                                         Max ]
+                         : ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+                         : log(TMath::Max(10e-10,C_ENDVERTEX_CHI2/C_ENDVERTEX_NDOF)):                                                    -1.2563                                                     2.2917   [                                                    -20.085                                                     3.1878 ]
+                         :                                                      C_PT:                                                     10947.                                                     3570.0   [                                                     3900.0                                                     32793. ]
+                         :                                      log(Pi_IPCHI2_OWNPV):                                                   0.072251                                                     1.4463   [                                                    -9.2660                                                     2.7721 ]
+                         :                                               Pi_ProbNNpi:                                                    0.85730                                                    0.20978   [                                                    0.10015                                                    0.99952 ]
+                         :                                                     Pi_PT:                                                     649.81                                                     494.20   [                                                     200.02                                                     6133.3 ]
+                         : ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+                         : Preparing the Decorrelation transformation...
+TFHandler_Factory        :                                                  Variable                                                         Mean                                                         RMS                                                 [        Min                                                         Max ]
+                         : ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+                         : log(TMath::Max(10e-10,C_ENDVERTEX_CHI2/C_ENDVERTEX_NDOF)):                                                   -0.64105                                                     1.0000   [                                                    -9.4846                                                     2.0403 ]
+                         :                                                      C_PT:                                                     3.0636                                                     1.0000   [                                                     1.0913                                                     9.1011 ]
+                         :                                      log(Pi_IPCHI2_OWNPV):                                                    0.20464                                                     1.0000   [                                                    -6.4686                                                     3.1503 ]
+                         :                                               Pi_ProbNNpi:                                                     3.9505                                                     1.0000   [                                                   -0.46712                                                     4.7883 ]
+                         :                                                     Pi_PT:                                                    0.13309                                                     1.0000   [                                                    -2.6127                                                     10.670 ]
+                         : ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+                         : Preparing the Principle Component (PCA) transformation...
+TFHandler_Factory        :                                                  Variable                                                         Mean                                                         RMS                                                 [        Min                                                         Max ]
+                         : ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+                         : log(TMath::Max(10e-10,C_ENDVERTEX_CHI2/C_ENDVERTEX_NDOF)):                                                -1.1698e-06                                                     3576.7   [                                                    -7059.1                                                     21923. ]
+                         :                                                      C_PT:                                                 3.0838e-08                                                     443.40   [                                                    -1343.4                                                     4565.7 ]
+                         :                                      log(Pi_IPCHI2_OWNPV):                                                -4.8697e-10                                                     2.4284   [                                                    -5.1801                                                     17.559 ]
+                         :                                               Pi_ProbNNpi:                                                -7.2598e-11                                                     1.1954   [                                                    -7.2788                                                     6.7634 ]
+                         :                                                     Pi_PT:                                                -8.2547e-11                                                    0.20776   [                                                   -0.17514                                                    0.91760 ]
+                         : ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+                         : Preparing the Gaussian transformation...
+                         : Preparing the Decorrelation transformation...
+TFHandler_Factory        :                                                  Variable                                                         Mean                                                         RMS                                                 [        Min                                                         Max ]
+                         : ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+                         : log(TMath::Max(10e-10,C_ENDVERTEX_CHI2/C_ENDVERTEX_NDOF)):                                                  0.0060491                                                     1.0000   [                                                    -3.4868                                                     7.1861 ]
+                         :                                                      C_PT:                                                  0.0034514                                                     1.0000   [                                                    -3.2276                                                     5.8195 ]
+                         :                                      log(Pi_IPCHI2_OWNPV):                                                  0.0047754                                                     1.0000   [                                                    -4.2792                                                     6.3875 ]
+                         :                                               Pi_ProbNNpi:                                                  0.0050331                                                     1.0000   [                                                    -3.4003                                                     5.8625 ]
+                         :                                                     Pi_PT:                                                  0.0043410                                                     1.0000   [                                                    -3.5834                                                     5.8337 ]
+                         : ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+                         : Ranking input variables (method unspecific)...
+IdTransformation         : Ranking result (top variable is best ranked)
+                         : --------------------------------------------------
+                         : Rank : Variable                  : Separation
+                         : --------------------------------------------------
+                         :    1 : Pi_PT                     : 1.214e-01
+                         :    2 : Pi_ProbNNpi               : 1.172e-01
+                         :    3 : C_PT                      : 3.064e-02
+                         :    4 : log(Pi_IPCHI2_OWNPV)      : 1.524e-02
+                         :    5 : log_C_ENDVERTEX_CHI2_NDOF : 6.465e-03
+                         : --------------------------------------------------
+Factory                  : Train method: BDT for Classification
+                         : 
+BDT                      : #events: (reweighted) sig: 4739 bkg: 4739
+                         : #events: (unweighted) sig: 3608 bkg: 5870
+                         : Training 850 Decision Trees ... patience please
+                         : Elapsed time for training with 9478 events: [1;31m1.61 sec[0m         
+BDT                      : [dataset-Xiccpst-Tight] : Evaluation of BDT on training sample (9478 events)
+                         : Elapsed time for evaluation of 9478 events: [1;31m0.474 sec[0m       
+                         : Creating xml weight file: [0;36mdataset-Xiccpst-Tight/weights/TMVAClassification_BDT.weights.xml[0m
+                         : Creating standalone class: [0;36mdataset-Xiccpst-Tight/weights/TMVAClassification_BDT.class.C[0m
+                         : /afs/cern.ch/work/p/pgaigne/MVA/TMVAout-Xiccpst-Tight.root:/dataset-Xiccpst-Tight/Method_BDT/BDT
+Factory                  : Training finished
+                         : 
+Factory                  : Train method: BDTG for Classification
+                         : 
+BDTG                     : #events: (reweighted) sig: 4739 bkg: 4739
+                         : #events: (unweighted) sig: 3608 bkg: 5870
+                         : Training 1000 Decision Trees ... patience please
+                         : Elapsed time for training with 9478 events: [1;31m2.36 sec[0m         
+BDTG                     : [dataset-Xiccpst-Tight] : Evaluation of BDTG on training sample (9478 events)
+                         : Elapsed time for evaluation of 9478 events: [1;31m0.294 sec[0m       
+                         : Creating xml weight file: [0;36mdataset-Xiccpst-Tight/weights/TMVAClassification_BDTG.weights.xml[0m
+                         : Creating standalone class: [0;36mdataset-Xiccpst-Tight/weights/TMVAClassification_BDTG.class.C[0m
+                         : /afs/cern.ch/work/p/pgaigne/MVA/TMVAout-Xiccpst-Tight.root:/dataset-Xiccpst-Tight/Method_BDT/BDTG
+Factory                  : Training finished
+                         : 
+Factory                  : Train method: MLP for Classification
+                         : 
+                         : 
+                         : [1m================================================================[0m
+                         : [1mH e l p   f o r   M V A   m e t h o d   [ MLP ] :[0m
+                         : 
+                         : [1m--- Short description:[0m
+                         : 
+                         : The MLP artificial neural network (ANN) is a traditional feed-
+                         : forward multilayer perceptron implementation. The MLP has a user-
+                         : defined hidden layer architecture, while the number of input (output)
+                         : nodes is determined by the input variables (output classes, i.e., 
+                         : signal and one background). 
+                         : 
+                         : [1m--- Performance optimisation:[0m
+                         : 
+                         : Neural networks are stable and performing for a large variety of 
+                         : linear and non-linear classification problems. However, in contrast
+                         : to (e.g.) boosted decision trees, the user is advised to reduce the 
+                         : number of input variables that have only little discrimination power. 
+                         : 
+                         : In the tests we have carried out so far, the MLP and ROOT networks
+                         : (TMlpANN, interfaced via TMVA) performed equally well, with however
+                         : a clear speed advantage for the MLP. The Clermont-Ferrand neural 
+                         : net (CFMlpANN) exhibited worse classification performance in these
+                         : tests, which is partly due to the slow convergence of its training
+                         : (at least 10k training cycles are required to achieve approximately
+                         : competitive results).
+                         : 
+                         : [1mOvertraining: [0monly the TMlpANN performs an explicit separation of the
+                         : full training sample into independent training and validation samples.
+                         : We have found that in most high-energy physics applications the 
+                         : available degrees of freedom (training events) are sufficient to 
+                         : constrain the weights of the relatively simple architectures required
+                         : to achieve good performance. Hence no overtraining should occur, and 
+                         : the use of validation samples would only reduce the available training
+                         : information. However, if the performance on the training sample is 
+                         : found to be significantly better than the one found with the inde-
+                         : pendent test sample, caution is needed. The results for these samples 
+                         : are printed to standard output at the end of each training job.
+                         : 
+                         : [1m--- Performance tuning via configuration options:[0m
+                         : 
+                         : The hidden layer architecture for all ANNs is defined by the option
+                         : "HiddenLayers=N+1,N,...", where here the first hidden layer has N+1
+                         : neurons and the second N neurons (and so on), and where N is the number  
+                         : of input variables. Excessive numbers of hidden layers should be avoided,
+                         : in favour of more neurons in the first hidden layer.
+                         : 
+                         : The number of cycles should be above 500. As said, if the number of
+                         : adjustable weights is small compared to the training sample size,
+                         : using a large number of training samples should not lead to overtraining.
+                         : 
+                         : <Suppress this message by specifying "!H" in the booking option>
+                         : [1m================================================================[0m
+                         : 
+TFHandler_MLP            :                                                  Variable                                                         Mean                                                         RMS                                                 [        Min                                                         Max ]
+                         : ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+                         : log(TMath::Max(10e-10,C_ENDVERTEX_CHI2/C_ENDVERTEX_NDOF)):                                                    0.61809                                                    0.19694   [                                                    -1.0000                                                     1.0000 ]
+                         :                                                      C_PT:                                                   -0.51222                                                    0.24712   [                                                    -1.0000                                                     1.0000 ]
+                         :                                      log(Pi_IPCHI2_OWNPV):                                                    0.55146                                                    0.24028   [                                                    -1.0000                                                     1.0000 ]
+                         :                                               Pi_ProbNNpi:                                                    0.68374                                                    0.46650   [                                                    -1.0000                                                     1.0000 ]
+                         :                                                     Pi_PT:                                                   -0.84838                                                    0.16659   [                                                    -1.0000                                                     1.0000 ]
+                         : ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+                         : Training Network
+                         : 
+                         : Elapsed time for training with 9478 events: [1;31m18.5 sec[0m         
+MLP                      : [dataset-Xiccpst-Tight] : Evaluation of MLP on training sample (9478 events)
+                         : Elapsed time for evaluation of 9478 events: [1;31m0.0123 sec[0m       
+                         : Creating xml weight file: [0;36mdataset-Xiccpst-Tight/weights/TMVAClassification_MLP.weights.xml[0m
+                         : Creating standalone class: [0;36mdataset-Xiccpst-Tight/weights/TMVAClassification_MLP.class.C[0m
+                         : Write special histos to file: /afs/cern.ch/work/p/pgaigne/MVA/TMVAout-Xiccpst-Tight.root:/dataset-Xiccpst-Tight/Method_MLP/MLP
+Factory                  : Training finished
+                         : 
+                         : Ranking input variables (method specific)...
+BDT                      : Ranking result (top variable is best ranked)
+                         : -------------------------------------------------------------------------------------------
+                         : Rank : Variable                                                  : Variable Importance
+                         : -------------------------------------------------------------------------------------------
+                         :    1 : C_PT                                                      : 2.063e-01
+                         :    2 : log(Pi_IPCHI2_OWNPV)                                      : 2.059e-01
+                         :    3 : Pi_ProbNNpi                                               : 2.047e-01
+                         :    4 : Pi_PT                                                     : 1.921e-01
+                         :    5 : log(TMath::Max(10e-10,C_ENDVERTEX_CHI2/C_ENDVERTEX_NDOF)) : 1.910e-01
+                         : -------------------------------------------------------------------------------------------
+BDTG                     : Ranking result (top variable is best ranked)
+                         : -------------------------------------------------------------------------------------------
+                         : Rank : Variable                                                  : Variable Importance
+                         : -------------------------------------------------------------------------------------------
+                         :    1 : log(Pi_IPCHI2_OWNPV)                                      : 2.209e-01
+                         :    2 : C_PT                                                      : 2.087e-01
+                         :    3 : log(TMath::Max(10e-10,C_ENDVERTEX_CHI2/C_ENDVERTEX_NDOF)) : 2.031e-01
+                         :    4 : Pi_ProbNNpi                                               : 1.904e-01
+                         :    5 : Pi_PT                                                     : 1.769e-01
+                         : -------------------------------------------------------------------------------------------
+MLP                      : Ranking result (top variable is best ranked)
+                         : -------------------------------------------------------------------------------------
+                         : Rank : Variable                                                     : Importance
+                         : -------------------------------------------------------------------------------------
+                         :    1 : Pi_PT                                                        : 5.839e+01
+                         :    2 : Pi_ProbNNpi                                                  : 2.539e+01
+                         :    3 : log_Pi_IPCHI2_OWNPV_                                         : 1.850e+01
+                         :    4 : log_TMath_Max_10e_M_10,C_ENDVERTEX_CHI2_D_C_ENDVERTEX_NDOF__ : 1.050e+01
+                         :    5 : C_PT                                                         : 3.244e+00
+                         : -------------------------------------------------------------------------------------
+Factory                  : === Destroy and recreate all methods via weight files for testing ===
+                         : 
+                         : Reading weight file: [0;36mdataset-Xiccpst-Tight/weights/TMVAClassification_BDT.weights.xml[0m
+                         : Reading weight file: [0;36mdataset-Xiccpst-Tight/weights/TMVAClassification_BDTG.weights.xml[0m
+                         : Reading weight file: [0;36mdataset-Xiccpst-Tight/weights/TMVAClassification_MLP.weights.xml[0m
+MLP                      : Building Network. 
+                         : Initializing weights
+Factory                  : [1mTest all methods[0m
+Factory                  : Test method: BDT for Classification performance
+                         : 
+BDT                      : [dataset-Xiccpst-Tight] : Evaluation of BDT on testing sample (9478 events)
+                         : Elapsed time for evaluation of 9478 events: [1;31m0.377 sec[0m       
+Factory                  : Test method: BDTG for Classification performance
+                         : 
+BDTG                     : [dataset-Xiccpst-Tight] : Evaluation of BDTG on testing sample (9478 events)
+                         : Elapsed time for evaluation of 9478 events: [1;31m0.242 sec[0m       
+Factory                  : Test method: MLP for Classification performance
+                         : 
+MLP                      : [dataset-Xiccpst-Tight] : Evaluation of MLP on testing sample (9478 events)
+                         : Elapsed time for evaluation of 9478 events: [1;31m0.0135 sec[0m       
+Factory                  : [1mEvaluate all methods[0m
+Factory                  : Evaluate classifier: BDT
+                         : 
+BDT                      : [dataset-Xiccpst-Tight] : Loop over test events and fill histograms with classifier response...
+                         : 
+TFHandler_BDT            :                                                  Variable                                                         Mean                                                         RMS                                                 [        Min                                                         Max ]
+                         : ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+                         : log(TMath::Max(10e-10,C_ENDVERTEX_CHI2/C_ENDVERTEX_NDOF)):                                                    -1.2504                                                     2.3040   [                                                    -15.303                                                     3.2071 ]
+                         :                                                      C_PT:                                                     11001.                                                     3653.6   [                                                     3910.8                                                     36095. ]
+                         :                                      log(Pi_IPCHI2_OWNPV):                                                    0.10343                                                     1.4507   [                                                    -8.7290                                                     2.7721 ]
+                         :                                               Pi_ProbNNpi:                                                    0.85971                                                    0.20758   [                                                    0.10011                                                    0.99959 ]
+                         :                                                     Pi_PT:                                                     660.42                                                     504.43   [                                                     200.01                                                     4893.7 ]
+                         : ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Factory                  : Evaluate classifier: BDTG
+                         : 
+BDTG                     : [dataset-Xiccpst-Tight] : Loop over test events and fill histograms with classifier response...
+                         : 
+TFHandler_BDTG           :                                                  Variable                                                         Mean                                                         RMS                                                 [        Min                                                         Max ]
+                         : ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+                         : log(TMath::Max(10e-10,C_ENDVERTEX_CHI2/C_ENDVERTEX_NDOF)):                                                    -1.2504                                                     2.3040   [                                                    -15.303                                                     3.2071 ]
+                         :                                                      C_PT:                                                     11001.                                                     3653.6   [                                                     3910.8                                                     36095. ]
+                         :                                      log(Pi_IPCHI2_OWNPV):                                                    0.10343                                                     1.4507   [                                                    -8.7290                                                     2.7721 ]
+                         :                                               Pi_ProbNNpi:                                                    0.85971                                                    0.20758   [                                                    0.10011                                                    0.99959 ]
+                         :                                                     Pi_PT:                                                     660.42                                                     504.43   [                                                     200.01                                                     4893.7 ]
+                         : ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Factory                  : Evaluate classifier: MLP
+                         : 
+TFHandler_MLP            :                                                  Variable                                                         Mean                                                         RMS                                                 [        Min                                                         Max ]
+                         : ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+                         : log(TMath::Max(10e-10,C_ENDVERTEX_CHI2/C_ENDVERTEX_NDOF)):                                                    0.61860                                                    0.19799   [                                                   -0.58900                                                     1.0017 ]
+                         :                                                      C_PT:                                                   -0.50849                                                    0.25291   [                                                   -0.99925                                                     1.2286 ]
+                         :                                      log(Pi_IPCHI2_OWNPV):                                                    0.55664                                                    0.24102   [                                                   -0.91077                                                     1.0000 ]
+                         :                                               Pi_ProbNNpi:                                                    0.68909                                                    0.46160   [                                                    -1.0001                                                     1.0001 ]
+                         :                                                     Pi_PT:                                                   -0.84481                                                    0.17003   [                                                    -1.0000                                                    0.58216 ]
+                         : ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+MLP                      : [dataset-Xiccpst-Tight] : Loop over test events and fill histograms with classifier response...
+                         : 
+TFHandler_MLP            :                                                  Variable                                                         Mean                                                         RMS                                                 [        Min                                                         Max ]
+                         : ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+                         : log(TMath::Max(10e-10,C_ENDVERTEX_CHI2/C_ENDVERTEX_NDOF)):                                                    0.61860                                                    0.19799   [                                                   -0.58900                                                     1.0017 ]
+                         :                                                      C_PT:                                                   -0.50849                                                    0.25291   [                                                   -0.99925                                                     1.2286 ]
+                         :                                      log(Pi_IPCHI2_OWNPV):                                                    0.55664                                                    0.24102   [                                                   -0.91077                                                     1.0000 ]
+                         :                                               Pi_ProbNNpi:                                                    0.68909                                                    0.46160   [                                                    -1.0001                                                     1.0001 ]
+                         :                                                     Pi_PT:                                                   -0.84481                                                    0.17003   [                                                    -1.0000                                                    0.58216 ]
+                         : ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+                         : 
+                         : Evaluation results ranked by best signal efficiency and purity (area)
+                         : -------------------------------------------------------------------------------------------------------------------
+                         : DataSet       MVA                       
+                         : Name:         Method:          ROC-integ
+                         : dataset-Xiccpst-Tight BDTG           : 0.743
+                         : dataset-Xiccpst-Tight MLP            : 0.740
+                         : dataset-Xiccpst-Tight BDT            : 0.739
+                         : -------------------------------------------------------------------------------------------------------------------
+                         : 
+                         : Testing efficiency compared to training efficiency (overtraining check)
+                         : -------------------------------------------------------------------------------------------------------------------
+                         : DataSet              MVA              Signal efficiency: from test sample (from training sample) 
+                         : Name:                Method:          @B=0.01             @B=0.10            @B=0.30   
+                         : -------------------------------------------------------------------------------------------------------------------
+                         : dataset-Xiccpst-Tight BDTG           : 0.060 (0.082)       0.364 (0.405)      0.663 (0.698)
+                         : dataset-Xiccpst-Tight MLP            : 0.058 (0.064)       0.354 (0.371)      0.650 (0.671)
+                         : dataset-Xiccpst-Tight BDT            : 0.055 (0.098)       0.354 (0.416)      0.646 (0.694)
+                         : -------------------------------------------------------------------------------------------------------------------
+                         : 
+Dataset:dataset-Xiccps...: Created tree 'TestTree' with 9478 events
+                         : 
+Dataset:dataset-Xiccps...: Created tree 'TrainTree' with 9478 events
+                         : 
+Factory                  : [1mThank you for using TMVA![0m
+                         : [1mFor citation information, please visit: http://tmva.sf.net/citeTMVA.html[0m

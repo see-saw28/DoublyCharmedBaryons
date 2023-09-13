@@ -1,0 +1,35 @@
+Remove clone : /eos/lhcb/user/p/pgaigne/STEP3/2016/RS/Xiccpst-RS-2016-Xicc-Lc-Loose.root
+Event 0 of 16960
+Event 10000 of 16960
+
+=== START printing statistic information about clone==
+Before :  16960
+After  :  16940
+Removed clone: 20
+magFrac:0.050000, clone tracks have close mag: 20 
+clone tracks have different mag: 519
+=== END printing statistic information about clone==
+
+=== START printing statistic information about the abnormal particles== 
+abnormalCount 160
+abnormalTypeList statistic [[67, 40], [35, 39], [37, 22], [36, 13], [56, 12], [57, 34]]
+abnormal theta: min(0.01331009), max(0.30929692), mean(0.13518268), middle(0.12892115)
+=== END statistic information about the abnormal particles== 
+Clones are removed
+Remove clone : /eos/lhcb/user/p/pgaigne/STEP3/2016/RS/Omegaccpst-RS-2016-Xicc-Lc-Loose.root
+Event 0 of 3219
+
+=== START printing statistic information about clone==
+Before :  3219
+After  :  3210
+Removed clone: 9
+magFrac:0.050000, clone tracks have close mag: 9 
+clone tracks have different mag: 107
+=== END printing statistic information about clone==
+
+=== START printing statistic information about the abnormal particles== 
+abnormalCount 5
+abnormalTypeList statistic [[35, 5]]
+abnormal theta: min(0.01331009), max(0.06606392), mean(0.02386149), middle(0.01331167)
+=== END statistic information about the abnormal particles== 
+Clones are removed
